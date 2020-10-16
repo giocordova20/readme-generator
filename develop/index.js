@@ -1,13 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const { title } = require("process");
+var generateMarkdown=("./utils/generateMarkdown.js")
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
     {
         type: "input",
-        name: "project title",
+        name: "projectTitle",
         message: "What is the name of your application?"
       },
       {
@@ -74,18 +76,43 @@ function generateREADME(answers) {
   `;
 };
 
+
+function generateMarkdown1(answers) {
+  console.log("");
+  console.log("in this generateMarkdown_f")
+  console.log("answers" , answers);
+  console.log("answers.title" , answers.projectTitle);
+  console.log("");
+  return `# ${answers.projectTitle}`;
+
+};
+
+
+
+
+
+
+
+
 // function to initialize program
 async function init() {
   console.log("  - Hi - ")
   try {
     const answers = await promptUser();
 
-    // const readme = generateREADME(answers);
+    console.log("-----------");
+    console.log("answers", answers);
+    console.log("-----------");
 
-    // await writeFileAsync("README.md", readme);
+    const readme = generateMarkdown1(answers);
 
-    console.log("answers", answers)
-    // console.log("Successfully wrote to READM.ms");
+    console.log("readme ",readme);
+
+
+
+    await writeFileAsync("README.md", readme);
+
+    console.log("Successfully wrote to READM.md");
   } catch(err) {
     console.log(err);
   }
