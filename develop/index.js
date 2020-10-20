@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const { title } = require("process");
-var generateMarkdown=("./utils/generateMarkdown.js")
+const generateMarkdown=require("./utils/generateMarkdown.js")
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
@@ -15,7 +15,7 @@ const questions = [
       {
         type: "input",
         name: "description",
-        message: "Please enter a description of your application. What is does and any items to note."
+        message: "Please enter a description of your application. What it does and any items to note."
       },
       {
         type: "input",
@@ -40,10 +40,10 @@ const questions = [
       {
         type: "checkbox",
         name: "licenses",
-        message: "Which licene(s) is the application covered under?",
+        message: "Which licene is the application covered under?",
         choices: [
           "MIT", 
-          "GPLv2", 
+          "GPLv3", 
           "Apache", 
           "Other"
         ]
@@ -51,8 +51,13 @@ const questions = [
       {
         type: "input",
         name: "github",
-        message: "Enter your GitHub Username"
+        message: "Enter your GitHub Username: "
       },
+      {
+        type: "input",
+        name: "repo",
+        message: "Enter your GitHub repository: "
+      },      
       {
         type: "input",
         name: "email",
@@ -64,35 +69,6 @@ function promptUser (){
   return inquirer.prompt(questions)
 };
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-
-
-function generateREADME(answers) {
-  return `
-
-  `;
-};
-
-
-function generateMarkdown1(answers) {
-  console.log("");
-  console.log("in this generateMarkdown_f")
-  console.log("answers" , answers);
-  console.log("answers.title" , answers.projectTitle);
-  console.log("");
-  return `# ${answers.projectTitle}`;
-
-};
-
-
-
-
-
-
-
 
 // function to initialize program
 async function init() {
@@ -100,19 +76,28 @@ async function init() {
   try {
     const answers = await promptUser();
 
-    console.log("-----------");
-    console.log("answers", answers);
-    console.log("-----------");
+    // console.log("");
+    // console.log("-----------");
+    // console.log("-----------");
+    // console.log("answers", answers);
+    // console.log("-----------");
+    // console.log("-----------");
 
-    const readme = generateMarkdown1(answers);
+    const readme = generateMarkdown(answers);
 
-    console.log("readme ",readme);
+
+    console.log(" ");
+    console.log("README console.log \n", readme);
+    console.log(" ");
 
 
 
     await writeFileAsync("README.md", readme);
 
     console.log("Successfully wrote to READM.md");
+
+
+
   } catch(err) {
     console.log(err);
   }
