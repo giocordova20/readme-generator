@@ -6,12 +6,12 @@
 This application generates a README of the application for the user based on inputs the user provides to terminal prompts.
 
 ## Table of Contents
-[Installation Instructions](#installation)\n
-[Usage](#usage)\n
-[Contributing to this Application](#contributing)\n
-[How to test](#how-to-test)\n
-[License](#license)\n
-[Questions](#questions)\n
+[Installation Instructions](#installation)
+[Usage](#usage)
+[Contributing to this Application](#contributing)
+[How to test](#how-to-test)
+[License](#license)
+[Questions](#questions)
 
 ## Installation
 Make sure you have 'node.js' installed. After cloning this repository, navigate to the develop folder and install inquire: 'npm install inquirer'.
