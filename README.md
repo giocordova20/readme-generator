@@ -17,7 +17,7 @@ This application generates a README of the application for the user based on inp
 Make sure you have 'node.js' installed. After cloning this repository, navigate to the develop folder and install inquire: 'npm install inquirer'.
 
 ## Usage
-The user can use this application to quickly create a README file for their application.
+The user can use this application to quickly create a README file for their application. Navigate to the develop folder and run 'node index.js' then answer the propmts to create the README.
 
 Terminal View
 ![screenshot1](./develop/screen_shot.png)
