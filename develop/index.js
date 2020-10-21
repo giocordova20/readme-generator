@@ -7,7 +7,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
-    {
+      {
         type: "input",
         name: "projectTitle",
         message: "What is the name of your application?"
@@ -26,6 +26,26 @@ const questions = [
         type: "input",
         name: "usage",
         message: "How can a user utilize this application?"
+      },
+      {
+        type: "input",
+        name: "screenshot1",
+        message: "Would you like to insert a screenshot or gif to the Usage section? \n  Provide file location: './filelocation.jpeg' \n  "
+      },
+      {
+        type: "input",
+        name: "screenshot1desc",
+        message: "Would you like to enter a description for the first screenshot or gif in the Usage section? \n  Press Enter/Return leave the description blank. \n  "
+      },
+      {
+        type: "input",
+        name: "screenshot2",
+        message: "Would you like to insert another screenshot or gif to the Usage section? \n  Provide file location: './filelocation.jpeg' \n  "
+      },
+      {
+        type: "input",
+        name: "screenshot2desc",
+        message: "Would you like to enter a description for the second screenshot or gif in the Usage section? \n  Press Enter/Return leave the description blank. \n  "
       },
       {
         type: "input",
@@ -56,7 +76,7 @@ const questions = [
       {
         type: "input",
         name: "repo",
-        message: "Enter your GitHub repository: "
+        message: "Enter your GitHub Repository: "
       },      
       {
         type: "input",
@@ -72,37 +92,25 @@ function promptUser (){
 
 // function to initialize program
 async function init() {
-  console.log("  - Hi - ")
+  console.log("")
   try {
     const answers = await promptUser();
-
-    // console.log("");
-    // console.log("-----------");
-    // console.log("-----------");
-    // console.log("answers", answers);
-    // console.log("-----------");
-    // console.log("-----------");
-
     const readme = generateMarkdown(answers);
 
-
-    console.log(" ");
+    console.log("");
     console.log("README console.log \n", readme);
     console.log(" ");
-
-
-
+    
     await writeFileAsync("README.md", readme);
-
+    
     console.log("Successfully wrote to READM.md");
-
-
+    console.log("");
 
   } catch(err) {
     console.log(err);
   }
 };
 
-// function call to initialize program
+// Function call to initialize program
 init();
 
