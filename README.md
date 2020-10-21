@@ -6,12 +6,12 @@
 This application generates a README of the application for the user based on inputs the user provides to terminal prompts.
 
 ## Table of Contents
-[Installation Instructions](#installation)
-[Usage](#usage)
-[Contributing to this Application](#contributing)
-[How to test](#how-to-test)
-[License](#license)
-[Questions](#questions)
+1. [Installation Instructions](#installation)
+2. [Usage](#usage)
+3. [Contributing to this Application](#contributing)
+4. [How to test](#how-to-test)
+5. [License](#license)
+6. [Questions](#questions)
 
 ## Installation
 Make sure you have 'node.js' installed. After cloning this repository, navigate to the develop folder and install inquire: 'npm install inquirer'.
@@ -19,11 +19,11 @@ Make sure you have 'node.js' installed. After cloning this repository, navigate 
 ## Usage
 The user can use this application to quickly create a README file for their application.
 
-View of Terminal
+Terminal View
 ![screenshot1](./develop/screen_shot.png)
 
-Video Demo of The Application
-[Video Demo](https://drive.google.com/file/d/1ILVZyVQfzEHbjFKGOv2pd3XY8CUBODlx/view?usp=sharing)
+Video Demo of the Application
+[video Demo](undefined)
 
 # License
 This is the license being used for this applicaiton. Please look at the LICENSE.txt file in the repository for more information.
