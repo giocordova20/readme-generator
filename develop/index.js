@@ -39,12 +39,12 @@ const questions = [
       },
       {
         type: "input",
-        name: "screenshot2",
-        message: "Would you like to insert another screenshot or gif to the Usage section? \n  Provide file location: './filelocation.jpeg' \n  "
+        name: "video",
+        message: "Insert a link to a hosted video demo of the application if you have one?"
       },
       {
         type: "input",
-        name: "screenshot2desc",
+        name: "videodesc",
         message: "Would you like to enter a description for the second screenshot or gif in the Usage section? \n  Press Enter/Return leave the description blank. \n  "
       },
       {

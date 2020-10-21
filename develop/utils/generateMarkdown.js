@@ -1,13 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-  // console.log("");
-  // console.log("============");
-  // console.log("In the generateMarkdown function")
-  // console.log("answers:" , data);
-  // console.log("============");
-  // console.log("");
-
   return `
 # ${data.projectTitle}
 ![GitHub](https://img.shields.io/github/license/${data.github}/${data.repo}?color=green)
@@ -32,9 +25,8 @@ ${data.usage}
 ${data.screenshot1desc}
 ![screenshot1](${data.screenshot1})
 
-${data.screenshot2desc}
-![screenshot1](${data.screenshot2})
-
+${data.videodesc}
+[video Demo](${data.videod})
 
 # License
 This is the license being used for this applicaiton. Please look at the LICENSE.txt file in the repository for more information.
