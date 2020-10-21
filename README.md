@@ -20,7 +20,7 @@ Make sure you have 'node.js' installed. After cloning this repository, navigate 
 The user can use this application to quickly create a README file for their application.
 
 View of Terminal
-![screenshot1](./screen_shot.png)
+![screenshot1](./develop/screen_shot.png)
 
 Video Demo of The Application
 [Video Demo](https://drive.google.com/file/d/1ILVZyVQfzEHbjFKGOv2pd3XY8CUBODlx/view?usp=sharing)

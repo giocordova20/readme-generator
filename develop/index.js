@@ -101,7 +101,7 @@ async function init() {
     console.log("README console.log \n", readme);
     console.log(" ");
     
-    await writeFileAsync("README.md", readme);
+    await writeFileAsync("../README.md", readme);
     
     console.log("Successfully wrote to READM.md");
     console.log("");
